@@ -18,7 +18,7 @@ def dictionary = {
        word = dictionary[word]
      else
         word
-     end 
+     end
    }
    tweet_array.join(" ")
 end
