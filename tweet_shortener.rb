@@ -11,7 +11,12 @@ DICTIONARY = {
   "at" => "@",
   "and" => "&"
 }
- 
+
  def word_substituter(tweet)
-  tweet.split.map{|x| if DICTIONARY.has_key?(x) then DICTIONARY[x] else x end}.join(" ")
+  tweet.split.map{ |word|
+     if DICTIONARY.has_key?(word) 
+       then DICTIONARY[word] 
+     else
+        word 
+     end }.join(" ")
 end
