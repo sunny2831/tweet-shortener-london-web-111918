@@ -1,5 +1,4 @@
-# Write your code here.
-dictionary = {
+DICTIONARY = {
   "hello" => 'hi',
   "to" => 2,
   "two" => 2,
@@ -12,7 +11,6 @@ dictionary = {
   "at" => "@",
   "and" => "&"
 }
-
-def word_substituter(tweet)
-  tweet.split.map{|x| if dictionary.has_key?(x) then dictionary[x] else x end}.join(" ")
+ def word_substituter(tweet)
+  tweet.split.map{|x| if DICTIONARY.has_key?(x) then DICTIONARY[x] else x end}.join(" ")
 end
