@@ -13,10 +13,12 @@ def dictionary = {
 }
 
  def word_substituter(tweet)
-  tweet.split.map{ |word|
-     if dictionary.has_key?(word)
-       then dictionary[word]
+  tweet_array = tweet.split.collect { |word|
+     if dictionary.keys.include?(word)
+       word = dictionary[word]
      else
         word
-     end }.join(" ")
+     end 
+   }
+   tweet_array.join(" ")
 end
