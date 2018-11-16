@@ -14,12 +14,5 @@ dictionary = {
 }
 
 def word_substituter(tweet)
-  tweet.split.map do |word|
-    if dictionary.has_key?[word]
-      then dictionary(word)
-    else
-      word
-    end
-  end
-  .join(" ")
+  tweet.split.map{|x| if dictionary.has_key?(x) then dictionary[x] else x end}.join(" ")
 end
