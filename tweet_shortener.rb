@@ -12,3 +12,14 @@ dictionary = {
   "at" => "@",
   "and" => "&"
 }
+
+def word_substituter(tweet)
+  tweet.split.collect do |word|
+    if dictionary.has_key?[word]
+      then dictionary(word)
+    else
+      word
+    end
+  end
+end
+    
