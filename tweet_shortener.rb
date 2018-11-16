@@ -14,9 +14,9 @@ DICTIONARY = {
 
  def word_substituter(tweet)
   tweet.split.map{ |word|
-     if DICTIONARY.has_key?(word) 
-       then DICTIONARY[word] 
+     if DICTIONARY.has_key?(word)
+       then DICTIONARY[word]
      else
-        word 
+        word
      end }.join(" ")
 end
